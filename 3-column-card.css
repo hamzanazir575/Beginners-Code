@@ -1,0 +1,135 @@
+:root {
+    --first-card-bg: hsl(31, 77%, 52%);
+    --second-card-bg: hsl(184, 100%, 22%);
+    --third-card-bg: hsl(179, 100%, 13%);
+
+
+    --primary-color: hsl(0, 0%, 95%);
+    --main-font-color: hsla(0, 0%, 100%, 0.75);
+
+    --headings-font-family: 'Big Shoulders';
+    --paragraphs-font-family:'Lexend Deca';
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-size: 15px;
+    line-height: 1.7rem;
+}
+
+.card-container {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.first-card {
+    background-color: var(--first-card-bg);
+    padding: 2.5rem;
+    max-width: 300px;
+}
+
+.first-card a {
+    color: var(--first-card-bg);
+}
+
+ img {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-family: var(--headings-font-family);
+    color: var(--main-font-color);
+    margin-bottom: 2rem;
+}
+
+ .first-card p {
+    margin-bottom:3rem;
+    color: var(--main-font-color);
+    font-family: var(--paragraphs-font-family);
+}
+
+.second-card {
+    background-color: var(--second-card-bg);
+    padding: 2rem;
+    max-width: 300px;
+}
+
+.second-card p {
+    margin-bottom:3rem;
+    color: var(--main-font-color);
+    font-family: var(--paragraphs-font-family);
+}
+
+.second-card a {
+    color: var(--second-card-bg);
+}
+
+.third-card {
+    background-color: var(--third-card-bg);
+    padding: 2rem;
+    max-width: 300px;
+}
+
+.third-card p {
+    margin-bottom: 3rem;
+    color: var(--main-font-color);
+    font-family: var(--paragraphs-font-family);
+}
+
+.third-card a{
+    color: var(--third-card-bg);
+}
+
+ a {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    border-radius: 40px;
+    border: none;
+    font-family: var(--paragraphs-font-family);
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: transparent;
+    border: 2px solid var(--main-font-color);
+    color: #fff;
+}
+
+@media only screen and (max-width: 720px){
+    .grid-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .first-card p {
+        margin-bottom: 1.5rem;
+    }
+
+    .second-card p {
+        margin-bottom: 1.5rem;
+    }
+
+    .third-card p {
+        margin-bottom: 1rem;
+    }
+
+    a{
+        margin: 0;
+    }
+}
